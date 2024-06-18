@@ -1,0 +1,29 @@
+services:
+  # database:
+  #   build:
+  #     context: ./database_/
+  #   volumes:
+  #     - ./database_:/usr/src/app/
+  #   command: ["tail", "-f", "/dev/null"] 
+
+  backend:
+    build:
+      context: ./backend/
+    ports:
+      - "5000:5000"
+    # depends_on:
+    #   - database
+  web:
+    build:
+     context: ./frontend/web/
+    ports:
+     - "3000:3000"
+    depends_on:
+     - backend
+  mobile:
+    build:
+     context: ./frontend/mobile/
+    ports:
+     - "8081:8081"
+    depends_on:
+     - backend
