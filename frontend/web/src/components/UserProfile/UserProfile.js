@@ -10,7 +10,9 @@ import { ToastContainer, toast } from "react-toastify";
 function UserProfile() {
   const [profile, setProfile] = useState({});
 
+  // eslint-disable-next-line no-unused-vars
   const [profilePic, setProfilePic] = useState(null);
+  // eslint-disable-next-line no-unused-vars
   const [profilePicFile, setProfilePicFile] = useState(null);
 
   useEffect(() => {
@@ -144,7 +146,7 @@ function UserProfile() {
           <div>
             <button
               type="submit"
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               Save Changes
             </button>

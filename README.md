@@ -1,14 +1,27 @@
-# Projectnaam:
-
-# GLITCH-platform (GAMIFIED LEARNING INTERFACE THROUGH CHALLENGES AND HEURISTICS)
+# wp4-2024-starter
+# GLITCH
 
 ## Overzicht
 
 Dit project maakt gebruik van Docker-containers om meerdere toepassingen te orchestreren, waaronder een database, een Flask API-backend en React-gebaseerde web- en mobiele front-ends. Het heeft tot doel een naadloze ontwikkelings- en implementatieomgeving te bieden.
 
-## Belangrijke opmerking!!
+## Belangrijke opmerkingen!!
 
-Het applicatie Moet getest worden op FirFox, Andere browsers staan het opslaan van onveilige sessies aan de clientzijde niet toe, want de applicatie gebruikt CORS.
+1. **URL-aanpassing in constante bestanden**: Zorg ervoor dat u de URL in de constantebestanden van zowel de web- als de mobiele frontend aanpast om overeen te komen met de URL van uw backend.
+
+2. **Problemen met inloggen en CORS**: Als u problemen ondervindt bij het inloggen, moet u mogelijk de CORS-instellingen (Cross-Origin Resource Sharing) op de backend aanpassen om het juiste domein toe te staan.
+
+3. **Gebruik van HTTPS**: Om HTTPS te gebruiken, moet u de "secure session" vlag inschakelen in uw Flask-applicatie en Flask-Talisman configureren om HTTPS af te dwingen.
+
+4. **Talisman en HTTPS**: Als u uw applicatie via HTTPS wilt laten draaien, moet u ervoor zorgen dat Flask-Talisman correct is geconfigureerd om HTTPS te handhaven.
+
+5. **Gebruik aub FireFox**: Gebruik alstublieft Firefox: Gebruik alstublieft Firefox voor testdoeleinden, omdat dit de enige browser is die onbeveiligde cookies ondersteunt.
+
+6. **Inloggen Gebruikgegevens**:
+User Name: user1, Password: password1<br/>
+User Name: user2, Password: password2<br/>
+User Name: user3, Password: password3<br/>
+User Name: teacher1, Password: teacherpass<br/>
 
 ## Projectstructuur
 
@@ -18,10 +31,9 @@ Het applicatie Moet getest worden op FirFox, Andere browsers staan het opslaan v
   - **Dockerfile**: Configuratie voor het uitvoeren python.
 - **frontend**:
   - **web**: Bevat de op React gebaseerde webfrontend.
-  - **Dockerfile**: Configuratie voor het uitvoeren python.
-   
+    - **Dockerfile**: Configuratie voor het uitvoeren python.
   - **mobile**: Bevat de op React Native gebaseerde mobiele frontend.
-  - **Dockerfile**: Configuratie voor het uitvoeren python.
+    - **Dockerfile**: Configuratie voor het uitvoeren python.
 
 ## Installatie en Gebruik
 
@@ -37,14 +49,13 @@ Het applicatie Moet getest worden op FirFox, Andere browsers staan het opslaan v
 
 3. Gebruik Docker Compose om de containers te bouwen en uit te voeren:
 
-    bash
+    ```bash
     docker-compose up --build
-    
+    ```
 
-    Deze opdracht zal alle containers bouwen en starten die zijn gedefinieerd in het `docker-compose.yml` bestand.
+    Deze command zal alle containers bouwen en starten die zijn gedefinieerd in het `docker-compose.yml` bestand.
 
 ### Toegang tot Toepassingen
-
 
 - **Flask API-backend**:
   - Poort: 5000
@@ -56,31 +67,11 @@ Het applicatie Moet getest worden op FirFox, Andere browsers staan het opslaan v
 
 - **React Native mobiele frontend**:
   - Poort: 8081
-  - Om de React Native mobiele frontend uit te voeren, volgt u de instructies in de `mobile` map. Mogelijk moet u aanvullende configuraties instellen voor uw ontwikkelomgeving.
+  - Om de React Native mobiele frontend uit te voeren, volgt u de instructies in de `mobile` map. U moet mogelijk aanvullende configuraties instellen voor uw ontwikkelomgeving.
 
 ### Stoppen van de Containers
 
-Om de containers te stoppen, kunt u de volgende opdracht gebruiken:
+Om de containers te stoppen, kunt u de volgende command gebruiken:
 
-bash
+```bash
 docker-compose down
-
-
-Dit zal de containers stoppen en verwijderen die zijn gemaakt door Docker Compose.
-
-## Aanvullende Opmerkingen
-
-- Zorg ervoor dat er geen andere services actief zijn op de poorten die zijn gespecificeerd voor elke toepassing om conflicten te voorkomen.
-
-- Voor gedetailleerde informatie over het configureren van elke toepassing, raadpleegt u de README-bestanden die zich bevinden in hun respectievelijke mappen.
-
-
-- Je hoeft docker-compose niet te draaien als je aan een component van de applicatie wilt werken. Bijvoorbeeld, als je iets aan de mobiele applicatie wilt aanpassen, navigeer dan naar frontend/mobile en voer npx expo start uit. Dit geldt ook voor andere componenten:
-Backend: python app.py
-Frontend/web: npm start
-Frontend/mobiel: npx expo start || npm start android || npm start ios
-## login data
-User Name: user1, Password: password1<br/>
-User Name: user2, Password: password2<br/>
-User Name: user3, Password: password3<br/>
-User Name: teacher1, Password: teacher1<br/>

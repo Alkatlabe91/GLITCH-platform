@@ -11,12 +11,16 @@ domains_bp = Blueprint('domains', __name__)
 @cross_origin(supports_credentials=True)
 def register_user_course():
      data = request.json
-     print(data)
-     print(session['user_id'], data["module_id"])
      domainTable = DomainTable()
      domainTable.register_usermodules(session['user_id'], data["module_id"])
      return jsonify({"message": "added succesfuly"}),200
 
+
+@domains_bp.route('/domains/get_all_domaines', methods=['GET'])
+def get_all_domaines_with_realted_data():
+     domainTable = DomainTable()
+     progress = domainTable.get_all_domaines_with_realted_data()
+     return jsonify(progress),200
 
 @domains_bp.route('/domains/module_progress/<int:module_id>', methods=['GET'])
 def get_module_progress(module_id):
@@ -27,14 +31,12 @@ def get_module_progress(module_id):
 @domains_bp.route('/domains/submit_user_progress_module/<int:user_progress_module_id>', methods=['GET'])
 def submit_user_progress_module(user_progress_module_id):
      domainTable = DomainTable()
-     print(user_progress_module_id)
      domainTable.submit_user_progress_module_id(user_progress_module_id)
      return jsonify({"message": "updated succesfuly"}),200
 
 
 @domains_bp.route('/domains/get_all', methods=['GET'])
 def get_all_domains_joined_with_courses():
-    print(session['user_id'])
     all_domains = DomainTable().get_all_domains_joined_with_courses()
     return jsonify(all_domains)
 
@@ -42,43 +44,37 @@ def get_all_domains_joined_with_courses():
 @domains_bp.route('/domains/domin_new', methods=['POST'])
 def create_domain():
      data = request.json
-     print(data)
      domainTable = DomainTable()
-     domainTable.create_domain(data["domain_name"])
-     return jsonify({"message": "added succesfuly"}),200
+     domaine = domainTable.create_domain(data["domain_name"])
+     return jsonify({"message": "added succesfuly", "data": domaine}),200
 
 @domains_bp.route('/domains/activity_new', methods=['POST'])
 def create_activity():
      data = request.json
-     print(data)
      domainTable = DomainTable()
-     domainTable.create_activities(data["module_id"],data["activity_name"],data["description"],data["level"],data["type"],data["point"])
-     return jsonify({"message": "added succesfuly"}),200
+     activity =  domainTable.create_activities(data["module_id"],data["activity_name"],data["description"],data["level"],data["type"],data["point"])
+     return jsonify({"message": "added succesfuly" , "data": activity}),200
 
 @domains_bp.route('/domains/modules_new', methods=['POST'])
 def modules_new():
      data = request.json
-     print(data)
      domainTable = DomainTable()
-     domainTable.create_modules(data["instance_id"],data["module_name"],data["description"],data["required_point"])
-     return jsonify({"message": "added succesfuly"}),200
+     module = domainTable.create_modules(data["instance_id"],data["module_name"],data["description"],data["required_point"])
+     return jsonify({"message": "added succesfuly", "data": module}),200
 
 @domains_bp.route('/domains/domin_course_new', methods=['POST'])
 def create_domin_course():
      data = request.json
-     print(data)
-
      domainTable = DomainTable()
-     domainTable.create_course(data["domain_id"],data["course_name"],data["description"])
-     return jsonify({"message": "added succesfuly"}),200
+     course = domainTable.create_course(data["domain_id"],data["course_name"],data["description"])
+     return jsonify({"message": "added succesfuly", "data": course}),200
 
 @domains_bp.route('/domains/instance_course_new', methods=['POST'])
 def create_instance_course():
      data = request.json
-     print(data)
      domainTable = DomainTable()
-     domainTable.create_instance(data["course_id"],data["instance_name"],data["start_date"],data["end_date"])
-     return jsonify({"message": "added succesfuly"}),200
+     instance = domainTable.create_instance(data["course_id"],data["instance_name"],data["start_date"],data["end_date"])
+     return jsonify({"message": "added succesfuly", "data": instance}),200
 
 
 @domains_bp.route('/domains/get_registered_domain_by_usermodules', methods=['GET'])
@@ -118,7 +114,6 @@ def get_requested_tasks():
 @domains_bp.route('/domains/mark_user_progress_module_as_failed/<int:user_progress_module_id>', methods=['GET'])
 @cross_origin(supports_credentials=True)
 def mark_user_progress_module_as_failed(user_progress_module_id):
-    print(session['user_id'])
     DomainTable().mark_user_progress_module_as_failed(session['user_id'], user_progress_module_id)
     return jsonify({"message":"updated succesfuly"}), 200
 
@@ -169,4 +164,9 @@ def create_userpostcomments():
 @domains_bp.route('/domains/community', methods=['GET'])
 def community():
     results = DomainTable().get_userpost_with_comments()
+    return jsonify(results), 200
+
+@domains_bp.route('/domains/analytics', methods=['GET'])
+def analytics():
+    results = DomainTable().get_analytics_data()
     return jsonify(results), 200

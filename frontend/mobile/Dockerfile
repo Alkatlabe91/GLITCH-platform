@@ -1,13 +1,23 @@
-FROM node:13 
+# Use an official Node runtime as the base image
+FROM node:16
 
-WORKDIR /
+# Set the working directory
+WORKDIR /app
 
-COPY package.json .
-COPY package-lock.json .
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install Node.js dependencies
 RUN npm install
 
+# Install Expo CLI and @expo/ngrok globally
+RUN npm install -g expo-cli @expo/ngrok
+
+# Copy the rest of the application code
 COPY . .
 
-EXPOSE 8081
+# Expose the ports used by Expo
+EXPOSE 19000 19001 19002 8081
 
-CMD ["npx", "expo", "start"]
+# Start the Expo server with tunnel option
+CMD ["npm", "run", "startwithtunnel"]

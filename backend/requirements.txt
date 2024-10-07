@@ -8,3 +8,6 @@ openai
 Jinja2
 requests
 flask-cors
+Flask-SocketIO
+schedule
+flask-talisman

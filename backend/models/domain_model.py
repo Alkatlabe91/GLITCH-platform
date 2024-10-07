@@ -5,7 +5,7 @@
 
 import sqlite3
 from collections import defaultdict
-
+from datetime import datetime
 
 class DomainTable:
     def __init__(self, db_path='database/database.db'):
@@ -19,7 +19,9 @@ class DomainTable:
         cursor = conn.cursor()
         cursor.execute("""INSERT INTO domains (domain_name) VALUES (?)""", (domain_name,))
         conn.commit()
+        domain_id = cursor.lastrowid
         conn.close()
+        return dict({"domain_id": domain_id ,"domain_name":domain_name})
 
     def create_course(self,domain_id,course_name,description ):
         conn = self._connect()
@@ -27,28 +29,33 @@ class DomainTable:
         cursor = conn.cursor()
         cursor.execute("""INSERT INTO courses (domain_id,course_name,description) VALUES (?,?,?)""", (domain_id,course_name,description,))
         conn.commit()
+        course_id = cursor.lastrowid
+        cursor.execute("""SELECT * FROM courses WHERE course_id = ?""", (course_id,))
+        course = cursor.fetchone()
         conn.close()
-
-# CREATE TABLE instances (
-#   "instance_id" integer PRIMARY KEY AUTOINCREMENT,
-#   "course_id" integer ,
-#   "instance_name" text ,
-#   "start_date" DATETIME ,
-#   "end_date" DATETIME ,
-#   FOREIGN KEY("course_id") REFERENCES courses("course_id")
-
-# ) ;
-
-
-
-# CREATE TABLE modules (
-#   "module_id" integer PRIMARY KEY AUTOINCREMENT,
-#   "instance_id" integer ,
-#   "module_name" text ,
-#   "description" text ,
-#   "required_point" integer ,
-#   FOREIGN KEY("instance_id") REFERENCES instances("instance_id")
-# ) ;
+        return dict(course)
+    
+    def get_analytics_data(self):
+        conn = self._connect()
+        conn.row_factory = sqlite3.Row
+        users = conn.execute('SELECT * FROM users').fetchall()
+        courses = conn.execute('SELECT * FROM courses').fetchall()
+        instances = conn.execute('SELECT * FROM instances').fetchall()
+        modules = conn.execute('SELECT * FROM modules').fetchall()
+        activities = conn.execute('SELECT * FROM activities').fetchall()
+        user_modules = conn.execute('SELECT * FROM usermodules').fetchall()
+        user_progress_modules = conn.execute('SELECT * FROM userprogressmodules').fetchall()
+        conn.close()
+        return {
+        'users': [dict(user) for user in users],
+        'courses': [dict(course) for course in courses],
+        'instances': [dict(instance) for instance in instances],
+        'modules': [dict(module) for module in modules],
+        'activities': [dict(activity) for activity in activities],
+        'user_modules': [dict(user_module) for user_module in user_modules],
+        'user_progress_modules': [dict(user_progress_module) for user_progress_module in user_progress_modules],
+    }
+          
 
     def get_modules_by_instance_id(self, instance_id):
         conn = self._connect()
@@ -195,20 +202,6 @@ WHERE
      modules = cursor.fetchall()
      return [dict(module) for module in modules]
 
-# CREATE TABLE userprogressmodules (
-#   "user_progress_module_id" integer PRIMARY KEY AUTOINCREMENT,
-#   "user_activity_id" integer ,
-#   "reviwed_by" integer ,
-#   "submited" integer ,
-#   "finished" integer ,
-#   "passed" integer ,
-#   FOREIGN KEY("reviwed_by") REFERENCES users("user_id"),
-#   FOREIGN KEY("user_activity_id") REFERENCES activities("activity_id")
-# ) ;
-
-
-
-
 
     def create_instance(self,course_id,instance_name,start_date,end_date):
         conn = self._connect()
@@ -216,7 +209,11 @@ WHERE
         cursor = conn.cursor()
         cursor.execute("""INSERT INTO instances (course_id,instance_name,start_date,end_date) VALUES (?,?,?,?)""", (course_id,instance_name,start_date,end_date,))
         conn.commit()
+        instance_id = cursor.lastrowid
+        cursor.execute("""SELECT * FROM instances WHERE instance_id = ?""", (instance_id,))
+        instance = cursor.fetchone()
         conn.close()
+        return dict(instance)
 
     def create_modules(self,instance_id,module_name,description,required_point):
         conn = self._connect()
@@ -224,15 +221,48 @@ WHERE
         cursor = conn.cursor()
         cursor.execute("""INSERT INTO modules (instance_id,module_name,description,required_point) VALUES (?,?,?,?)""", (instance_id,module_name,description,required_point,))
         conn.commit()
+        module_id = cursor.lastrowid
+        cursor.execute("""SELECT * FROM modules WHERE module_id = ?""", (module_id,))
+        module = cursor.fetchone()
         conn.close()
+        return dict(module)
     
-    def create_activities(self,module_id,activity_name,description,level,type,point):
+
+    def create_activities(self, module_id, activity_name, description, level, activity_type, point):
         conn = self._connect()
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
-        cursor.execute("""INSERT INTO activities (module_id,activity_name,description,level,type,point) VALUES (?,?,?,?,?,?)""", (module_id,activity_name,description,level,type,point,))
-        conn.commit()
-        conn.close()
+        try:
+            cursor.execute("""
+                INSERT INTO activities (module_id, activity_name, description, level, type, point)
+                VALUES (?, ?, ?, ?, ?, ?)
+            """, (module_id, activity_name, description, level, activity_type, point))
+            conn.commit()
+            activity_id = cursor.lastrowid
+            cursor.execute("""
+                SELECT user_id FROM usermodules WHERE module_id = ?
+            """, (module_id,))
+            user_ids = cursor.fetchall()
+            for user_id_tuple in user_ids:
+                user_id = user_id_tuple['user_id']
+                cursor.execute("""
+                    INSERT INTO userprogressmodules (user_activity_id, reviwed_by, submited, finished, passed)
+                    VALUES (?, NULL, 0, 0, 0)
+                """, (activity_id,))
+            
+            conn.commit()
+            cursor.execute("""
+                SELECT * FROM activities WHERE activity_id = ?
+            """, (activity_id,))
+            activity = cursor.fetchone()
+        except sqlite3.Error as e:
+            conn.rollback()
+            return None
+        finally:
+            conn.close()
+        return dict(activity)
+    
+
 
     def get_all_domains_joined_with_courses(self):
         conn = self._connect()
@@ -276,7 +306,6 @@ WHERE
         cursor.execute(query)
         rows = cursor.fetchall()
 
-        # Transform the result set into the nested structure
         domains_dict = defaultdict(lambda: {"domain_id": None, "domain_name": None, "courses": []})
         
         for row in rows:
@@ -286,12 +315,10 @@ WHERE
             module_id = row["module_id"]
             activity_id = row["activity_id"]
             
-            # Add domain if not already added
             if domains_dict[domain_id]["domain_id"] is None:
                 domains_dict[domain_id]["domain_id"] = domain_id
                 domains_dict[domain_id]["domain_name"] = row["domain_name"]
             
-            # Find or create course
             courses = domains_dict[domain_id]["courses"]
             course = next((c for c in courses if c["course_id"] == course_id), None)
             if not course:
@@ -303,7 +330,6 @@ WHERE
                 }
                 courses.append(course)
             
-            # Find or create instance
             instances = course["instances"]
             instance = next((i for i in instances if i["instance_id"] == instance_id), None)
             if not instance:
@@ -316,7 +342,6 @@ WHERE
                 }
                 instances.append(instance)
             
-            # Find or create module
             modules = instance["modules"]
             module = next((m for m in modules if m["module_id"] == module_id), None)
             if not module:
@@ -329,7 +354,6 @@ WHERE
                 }
                 modules.append(module)
             
-            # Find or create activity
             activities = module["activities"]
             activity = next((a for a in activities if a["activity_id"] == activity_id), None)
             if not activity:
@@ -343,7 +367,6 @@ WHERE
                 }
                 activities.append(activity)
         
-        # Convert defaultdict to regular dict
         all_domains = list(domains_dict.values())
         
         return all_domains
@@ -507,13 +530,7 @@ WHERE
      conn.close()
      return  [dict(req) for req in results]
     
-# CREATE TABLE userposts (
-#   "user_post_id" integer PRIMARY KEY AUTOINCREMENT,
-#   "user_progress_module_id" integer ,
-#   "content" text ,
-#   FOREIGN KEY("user_progress_module_id") REFERENCES userprogressmodules("user_progress_module_id")
 
-# ) ;
     def create_user_progress_post(self,user_progress_module_id,content):
         conn = self._connect()
         conn.row_factory = sqlite3.Row
@@ -531,22 +548,7 @@ WHERE
         conn.close()
     
 
-#     CREATE TABLE userposts (
-#   "user_post_id" integer PRIMARY KEY AUTOINCREMENT,
-#   "user_progress_module_id" integer ,
-#   "content" text ,
-#   FOREIGN KEY("user_progress_module_id") REFERENCES userprogressmodules("user_progress_module_id")
 
-# ) ;
-
-
-# CREATE TABLE userpostcomments (
-#   "user_post_comment_id" integer PRIMARY KEY AUTOINCREMENT,
-#   "user_id" integer ,
-#   "user_post_id" integer ,
-#   "comment" text ,
-#   FOREIGN KEY("user_id") REFERENCES users("user_id"),
-#   FOREIG
     def get_all_user_posts(self):
         conn = self._connect()
         conn.row_factory = sqlite3.Row
@@ -569,13 +571,7 @@ WHERE
         conn.close()
         return  [dict(post) for post in results]
 
-# CREATE TABLE userpostcomments (
-#   "user_post_comment_id" integer PRIMARY KEY AUTOINCREMENT,
-#   "user_id" integer ,
-#   "user_post_id" integer ,
-#   "comment" text ,
-#   FOREIGN KEY("user_id") REFERENCES users("user_id"),
-#   FOREIG
+
     def get_all_user_postscomments(self):
         conn = self._connect()
         conn.row_factory = sqlite3.Row
@@ -624,3 +620,153 @@ WHERE
         grouped_posts = list(post_comments_dict.values())
 
         return grouped_posts
+
+    def get_unfinished_progress_modules(self):
+        conn = self._connect()
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        query = """ 
+    SELECT u.user_id, c.course_name, i.end_date, i.instance_name , m.module_id, upm.finished
+    FROM users u
+    JOIN usermodules um ON u.user_id = um.user_id
+    JOIN modules m ON um.module_id = m.module_id
+    JOIN instances i ON m.instance_id = i.instance_id
+    JOIN courses c ON c.course_id = i.course_id
+    LEFT JOIN activities a ON m.module_id = a.module_id
+    LEFT JOIN userprogressmodules upm ON a.activity_id = upm.user_activity_id
+           """
+        cursor.execute(query)
+        rows = cursor.fetchall()
+        user_progress = {}
+        messeges = []
+        current_date = datetime.now()
+        for row in rows:
+            user_id,course_name, end_date, instance_name, module_id, finished = row
+            if user_id not in user_progress:
+                user_progress[user_id] = {
+                'end_date': datetime.strptime(end_date, '%Y-%m-%d'),
+                 'instance_name': instance_name,
+                  'course_name': course_name,
+                'modules': {}
+                }
+            if module_id not in user_progress[user_id]['modules']:
+                user_progress[user_id]['modules'][module_id] = True
+
+            if not finished:
+                user_progress[user_id]['modules'][module_id] = False
+
+        for user_id, progress  in user_progress.items():
+            instance_name = progress['instance_name']
+            course_name = progress['course_name']
+            difference = progress['end_date'] - current_date
+            difference_in_days = difference.days
+            if difference_in_days < 15 :
+                    messeges.append({"instance_name": instance_name,"course_name" : course_name ,"difference_in_days" :difference_in_days, "end_date":progress['end_date'], "user_id": user_id  })
+        conn.close()
+        return messeges
+    
+
+    def get_all_domaines_with_realted_data(self):
+        conn = self._connect()
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        query = """ 
+            SELECT
+            d.domain_id,
+            d.domain_name,
+            c.course_id,
+            c.course_name,
+            c.description AS course_description,
+            i.instance_id,
+            i.instance_name,
+            i.start_date,
+            i.end_date,
+            m.module_id,
+            m.module_name,
+            m.description AS module_description,
+            m.required_point,
+            a.activity_id,
+            a.activity_name,
+            a.description AS activity_description,
+            a.level,
+            a.type,
+            a.point
+            FROM
+            domains d
+            LEFT JOIN
+            courses c ON d.domain_id = c.domain_id
+            LEFT JOIN
+            instances i ON c.course_id = i.course_id
+            LEFT JOIN
+            modules m ON i.instance_id = m.instance_id
+            LEFT JOIN
+            activities a ON m.module_id = a.module_id
+            ORDER BY
+            d.domain_id, c.course_id, i.instance_id, m.module_id, a.activity_id;
+                    """
+        cursor.execute(query)
+        rows = cursor.fetchall()
+        conn.close()
+        domains_dict = defaultdict(lambda: {"domain_id": None, "domain_name": None, "courses": []})
+        
+        for row in rows:
+            domain_id = row["domain_id"]
+            course_id = row["course_id"]
+            instance_id = row["instance_id"]
+            module_id = row["module_id"]
+            activity_id = row["activity_id"]
+            
+            if domains_dict[domain_id]["domain_id"] is None:
+                domains_dict[domain_id]["domain_id"] = domain_id
+                domains_dict[domain_id]["domain_name"] = row["domain_name"]
+            
+            courses = domains_dict[domain_id]["courses"]
+            course = next((c for c in courses if c["course_id"] == course_id), None)
+            if not course:
+                course = {
+                    "course_id": course_id,
+                    "course_name": row["course_name"],
+                    "course_description": row["course_description"],
+                    "instances": []
+                }
+                courses.append(course)
+            
+            instances = course["instances"]
+            instance = next((i for i in instances if i["instance_id"] == instance_id), None)
+            if not instance:
+                instance = {
+                    "instance_id": instance_id,
+                    "instance_name": row["instance_name"],
+                    "instance_start_date": row["start_date"],
+                    "instance_end_date": row["end_date"],
+                    "modules": []
+                }
+                instances.append(instance)
+            
+            modules = instance["modules"]
+            module = next((m for m in modules if m["module_id"] == module_id), None)
+            if not module:
+                module = {
+                    "module_id": module_id,
+                    "module_name": row["module_name"],
+                    "module_description": row["module_description"],
+                    "required_point": row["required_point"],
+                    "activities": []
+                }
+                modules.append(module)
+            
+            activities = module["activities"]
+            activity = next((a for a in activities if a["activity_id"] == activity_id), None)
+            if not activity:
+                activity = {
+                    "activity_id": activity_id,
+                    "activity_name": row["activity_name"],
+                    "activity_description": row["activity_description"],
+                    "level": row["level"],
+                    "type": row["type"],
+                    "point": row["point"]
+                }
+                activities.append(activity)
+        
+        all_domains = list(domains_dict.values())
+        return all_domains

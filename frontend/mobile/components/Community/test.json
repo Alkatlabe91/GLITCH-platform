@@ -1,0 +1,2039 @@
+[
+  {
+    "courses": [
+      {
+        "course_description": "An introductory course to software engineering principles.",
+        "course_id": 1,
+        "course_name": "Introduction to Software Engineering",
+        "instances": [
+          {
+            "instance_end_date": "2024-06-30",
+            "instance_id": 1,
+            "instance_name": "Spring 2024",
+            "instance_start_date": "2024-03-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": "Software Engineering Basics Assignment",
+                    "activity_id": 1,
+                    "activity_name": "Assignment 1",
+                    "level": 1,
+                    "point": 40,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Software Engineering Basics Quiz",
+                    "activity_id": 2,
+                    "activity_name": "Quiz 1",
+                    "level": 1,
+                    "point": 60,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Software Engineering Basics Project",
+                    "activity_id": 3,
+                    "activity_name": "Project 1",
+                    "level": 1,
+                    "point": 100,
+                    "type": "Project"
+                  },
+                  {
+                    "activity_description": "Read Book",
+                    "activity_id": 49,
+                    "activity_name": "Task 6",
+                    "level": 0,
+                    "point": 25,
+                    "type": "challenge"
+                  },
+                  {
+                    "activity_description": "hbfrjvf",
+                    "activity_id": 53,
+                    "activity_name": "activitu",
+                    "level": 3,
+                    "point": 3,
+                    "type": "concept-challenge"
+                  },
+                  {
+                    "activity_description": "fvhjfje",
+                    "activity_id": 54,
+                    "activity_name": "activitu",
+                    "level": 2,
+                    "point": 32,
+                    "type": "concept-challenge"
+                  },
+                  {
+                    "activity_description": "descriptiojn",
+                    "activity_id": 57,
+                    "activity_name": "Activity",
+                    "level": 3,
+                    "point": 2,
+                    "type": "concept-challenge"
+                  },
+                  {
+                    "activity_description": "bdjfb",
+                    "activity_id": 59,
+                    "activity_name": "bhj",
+                    "level": "",
+                    "point": 32,
+                    "type": "point-challenge"
+                  }
+                ],
+                "module_description": "Software Engineering Basics",
+                "module_id": 1,
+                "module_name": "Module 1",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": "Software Engineering Practices Assignment",
+                    "activity_id": 4,
+                    "activity_name": "Assignment 2",
+                    "level": 2,
+                    "point": 50,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Software Engineering Practices Quiz",
+                    "activity_id": 5,
+                    "activity_name": "Quiz 2",
+                    "level": 2,
+                    "point": 70,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Software Engineering Practices Project",
+                    "activity_id": 6,
+                    "activity_name": "Project 2",
+                    "level": 2,
+                    "point": 120,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Software Engineering Practices",
+                "module_id": 2,
+                "module_name": "Module 2",
+                "required_point": 50
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "fdbh",
+                "module_id": 66,
+                "module_name": "bfdj",
+                "required_point": 32
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-09-30",
+            "instance_id": 2,
+            "instance_name": "Summer 2024",
+            "instance_start_date": "2024-07-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Software Engineering Basics",
+                "module_id": 3,
+                "module_name": "Module 3",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Software Engineering Practices",
+                "module_id": 4,
+                "module_name": "Module 4",
+                "required_point": 50
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-12-31",
+            "instance_id": 3,
+            "instance_name": "Fall 2024",
+            "instance_start_date": "2024-10-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": "Creational Patterns Assignment",
+                    "activity_id": 7,
+                    "activity_name": "Assignment 1",
+                    "level": 1,
+                    "point": 40,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Creational Patterns Quiz",
+                    "activity_id": 8,
+                    "activity_name": "Quiz 1",
+                    "level": 1,
+                    "point": 60,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Creational Patterns Project",
+                    "activity_id": 9,
+                    "activity_name": "Project 1",
+                    "level": 1,
+                    "point": 100,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Software Engineering Basics",
+                "module_id": 5,
+                "module_name": "Module 5",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": "Structural Patterns Assignment",
+                    "activity_id": 10,
+                    "activity_name": "Assignment 2",
+                    "level": 2,
+                    "point": 60,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Structural Patterns Quiz",
+                    "activity_id": 11,
+                    "activity_name": "Quiz 2",
+                    "level": 2,
+                    "point": 80,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Structural Patterns Project",
+                    "activity_id": 12,
+                    "activity_name": "Project 2",
+                    "level": 2,
+                    "point": 140,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Software Engineering Practices",
+                "module_id": 6,
+                "module_name": "Module 6",
+                "required_point": 50
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2025-03-31",
+            "instance_id": 4,
+            "instance_name": "Winter 2024",
+            "instance_start_date": "2025-01-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Software Engineering Basics",
+                "module_id": 7,
+                "module_name": "Module 7",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Software Engineering Practices",
+                "module_id": 8,
+                "module_name": "Module 8",
+                "required_point": 50
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_description": "Learn about common software design patterns.",
+        "course_id": 2,
+        "course_name": "Software Design Patterns",
+        "instances": [
+          {
+            "instance_end_date": "2024-06-30",
+            "instance_id": 5,
+            "instance_name": "Spring 2024",
+            "instance_start_date": "2024-03-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": "Agile Principles Assignment",
+                    "activity_id": 13,
+                    "activity_name": "Assignment 1",
+                    "level": 1,
+                    "point": 40,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Agile Principles Quiz",
+                    "activity_id": 14,
+                    "activity_name": "Quiz 1",
+                    "level": 1,
+                    "point": 60,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Agile Principles Project",
+                    "activity_id": 15,
+                    "activity_name": "Project 1",
+                    "level": 1,
+                    "point": 100,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Creational Patterns",
+                "module_id": 9,
+                "module_name": "Module 1",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": "Agile Practices Assignment",
+                    "activity_id": 16,
+                    "activity_name": "Assignment 2",
+                    "level": 2,
+                    "point": 60,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Agile Practices Quiz",
+                    "activity_id": 17,
+                    "activity_name": "Quiz 2",
+                    "level": 2,
+                    "point": 80,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Agile Practices Project",
+                    "activity_id": 18,
+                    "activity_name": "Project 2",
+                    "level": 2,
+                    "point": 140,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Structural Patterns",
+                "module_id": 10,
+                "module_name": "Module 2",
+                "required_point": 60
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-09-30",
+            "instance_id": 6,
+            "instance_name": "Summer 2024",
+            "instance_start_date": "2024-07-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Creational Patterns",
+                "module_id": 11,
+                "module_name": "Module 3",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Structural Patterns",
+                "module_id": 12,
+                "module_name": "Module 4",
+                "required_point": 60
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-12-31",
+            "instance_id": 7,
+            "instance_name": "Fall 2024",
+            "instance_start_date": "2024-10-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": "Testing Basics Assignment",
+                    "activity_id": 19,
+                    "activity_name": "Assignment 1",
+                    "level": 1,
+                    "point": 40,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Testing Basics Quiz",
+                    "activity_id": 20,
+                    "activity_name": "Quiz 1",
+                    "level": 1,
+                    "point": 60,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Testing Basics Project",
+                    "activity_id": 21,
+                    "activity_name": "Project 1",
+                    "level": 1,
+                    "point": 100,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Creational Patterns",
+                "module_id": 13,
+                "module_name": "Module 5",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": "Quality Assurance Techniques Assignment",
+                    "activity_id": 22,
+                    "activity_name": "Assignment 2",
+                    "level": 2,
+                    "point": 60,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Quality Assurance Techniques Quiz",
+                    "activity_id": 23,
+                    "activity_name": "Quiz 2",
+                    "level": 2,
+                    "point": 80,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Quality Assurance Techniques Project",
+                    "activity_id": 24,
+                    "activity_name": "Project 2",
+                    "level": 2,
+                    "point": 140,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Structural Patterns",
+                "module_id": 14,
+                "module_name": "Module 6",
+                "required_point": 60
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2025-03-31",
+            "instance_id": 8,
+            "instance_name": "Winter 2024",
+            "instance_start_date": "2025-01-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Creational Patterns",
+                "module_id": 15,
+                "module_name": "Module 7",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Structural Patterns",
+                "module_id": 16,
+                "module_name": "Module 8",
+                "required_point": 60
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_description": "An overview of agile methodologies in software development.",
+        "course_id": 3,
+        "course_name": "Agile Software Development",
+        "instances": [
+          {
+            "instance_end_date": "2024-06-30",
+            "instance_id": 9,
+            "instance_name": "Spring 2024",
+            "instance_start_date": "2024-03-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": "Data Science Basics Assignment",
+                    "activity_id": 25,
+                    "activity_name": "Assignment 1",
+                    "level": 1,
+                    "point": 40,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Data Science Basics Quiz",
+                    "activity_id": 26,
+                    "activity_name": "Quiz 1",
+                    "level": 1,
+                    "point": 60,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Data Science Basics Project",
+                    "activity_id": 27,
+                    "activity_name": "Project 1",
+                    "level": 1,
+                    "point": 100,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Agile Principles",
+                "module_id": 17,
+                "module_name": "Module 1",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": "Data Science Tools Assignment",
+                    "activity_id": 28,
+                    "activity_name": "Assignment 2",
+                    "level": 2,
+                    "point": 50,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Data Science Tools Quiz",
+                    "activity_id": 29,
+                    "activity_name": "Quiz 2",
+                    "level": 2,
+                    "point": 70,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Data Science Tools Project",
+                    "activity_id": 30,
+                    "activity_name": "Project 2",
+                    "level": 2,
+                    "point": 120,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Agile Practices",
+                "module_id": 18,
+                "module_name": "Module 2",
+                "required_point": 60
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-09-30",
+            "instance_id": 10,
+            "instance_name": "Summer 2024",
+            "instance_start_date": "2024-07-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Agile Principles",
+                "module_id": 19,
+                "module_name": "Module 3",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Agile Practices",
+                "module_id": 20,
+                "module_name": "Module 4",
+                "required_point": 60
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-12-31",
+            "instance_id": 11,
+            "instance_name": "Fall 2024",
+            "instance_start_date": "2024-10-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": "Supervised Learning Assignment",
+                    "activity_id": 31,
+                    "activity_name": "Assignment 1",
+                    "level": 1,
+                    "point": 50,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Supervised Learning Quiz",
+                    "activity_id": 32,
+                    "activity_name": "Quiz 1",
+                    "level": 1,
+                    "point": 70,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Supervised Learning Project",
+                    "activity_id": 33,
+                    "activity_name": "Project 1",
+                    "level": 1,
+                    "point": 120,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Agile Principles",
+                "module_id": 21,
+                "module_name": "Module 5",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": "Unsupervised Learning Assignment",
+                    "activity_id": 34,
+                    "activity_name": "Assignment 2",
+                    "level": 2,
+                    "point": 70,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Unsupervised Learning Quiz",
+                    "activity_id": 35,
+                    "activity_name": "Quiz 2",
+                    "level": 2,
+                    "point": 90,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Unsupervised Learning Project",
+                    "activity_id": 36,
+                    "activity_name": "Project 2",
+                    "level": 2,
+                    "point": 140,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Agile Practices",
+                "module_id": 22,
+                "module_name": "Module 6",
+                "required_point": 60
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2025-03-31",
+            "instance_id": 12,
+            "instance_name": "Winter 2024",
+            "instance_start_date": "2025-01-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Agile Principles",
+                "module_id": 23,
+                "module_name": "Module 7",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Agile Practices",
+                "module_id": 24,
+                "module_name": "Module 8",
+                "required_point": 60
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_description": "Explore testing techniques and quality assurance processes in software engineering.",
+        "course_id": 4,
+        "course_name": "Software Testing and Quality Assurance",
+        "instances": [
+          {
+            "instance_end_date": "2024-06-30",
+            "instance_id": 13,
+            "instance_name": "Spring 2024",
+            "instance_start_date": "2024-03-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": "Visualization Principles Assignment",
+                    "activity_id": 37,
+                    "activity_name": "Assignment 1",
+                    "level": 1,
+                    "point": 40,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Visualization Principles Quiz",
+                    "activity_id": 38,
+                    "activity_name": "Quiz 1",
+                    "level": 1,
+                    "point": 60,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Visualization Principles Project",
+                    "activity_id": 39,
+                    "activity_name": "Project 1",
+                    "level": 1,
+                    "point": 100,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Testing Basics",
+                "module_id": 25,
+                "module_name": "Module 1",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": "Visualization Tools Assignment",
+                    "activity_id": 40,
+                    "activity_name": "Assignment 2",
+                    "level": 2,
+                    "point": 60,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Visualization Tools Quiz",
+                    "activity_id": 41,
+                    "activity_name": "Quiz 2",
+                    "level": 2,
+                    "point": 80,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Visualization Tools Project",
+                    "activity_id": 42,
+                    "activity_name": "Project 2",
+                    "level": 2,
+                    "point": 140,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Quality Assurance Techniques",
+                "module_id": 26,
+                "module_name": "Module 2",
+                "required_point": 60
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-09-30",
+            "instance_id": 14,
+            "instance_name": "Summer 2024",
+            "instance_start_date": "2024-07-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Testing Basics",
+                "module_id": 27,
+                "module_name": "Module 3",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Quality Assurance Techniques",
+                "module_id": 28,
+                "module_name": "Module 4",
+                "required_point": 60
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-12-31",
+            "instance_id": 15,
+            "instance_name": "Fall 2024",
+            "instance_start_date": "2024-10-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": "Big Data Fundamentals Assignment",
+                    "activity_id": 43,
+                    "activity_name": "Assignment 1",
+                    "level": 1,
+                    "point": 50,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Big Data Fundamentals Quiz",
+                    "activity_id": 44,
+                    "activity_name": "Quiz 1",
+                    "level": 1,
+                    "point": 70,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Big Data Fundamentals Project",
+                    "activity_id": 45,
+                    "activity_name": "Project 1",
+                    "level": 1,
+                    "point": 120,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Testing Basics",
+                "module_id": 29,
+                "module_name": "Module 5",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": "Big Data Applications Assignment",
+                    "activity_id": 46,
+                    "activity_name": "Assignment 2",
+                    "level": 2,
+                    "point": 70,
+                    "type": "Task"
+                  },
+                  {
+                    "activity_description": "Big Data Applications Quiz",
+                    "activity_id": 47,
+                    "activity_name": "Quiz 2",
+                    "level": 2,
+                    "point": 90,
+                    "type": "Challenge"
+                  },
+                  {
+                    "activity_description": "Big Data Applications Project",
+                    "activity_id": 48,
+                    "activity_name": "Project 2",
+                    "level": 2,
+                    "point": 140,
+                    "type": "Project"
+                  }
+                ],
+                "module_description": "Quality Assurance Techniques",
+                "module_id": 30,
+                "module_name": "Module 6",
+                "required_point": 60
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2025-03-31",
+            "instance_id": 16,
+            "instance_name": "Winter 2024",
+            "instance_start_date": "2025-01-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Testing Basics",
+                "module_id": 31,
+                "module_name": "Module 7",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Quality Assurance Techniques",
+                "module_id": 32,
+                "module_name": "Module 8",
+                "required_point": 60
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_description": "dvhsvfd fbejdfjeg ",
+        "course_id": 12,
+        "course_name": "Course 1",
+        "instances": [
+          {
+            "instance_end_date": null,
+            "instance_id": null,
+            "instance_name": null,
+            "instance_start_date": null,
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": null,
+                "module_id": null,
+                "module_name": null,
+                "required_point": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_description": "bdfhed grjg",
+        "course_id": 13,
+        "course_name": "Testing",
+        "instances": [
+          {
+            "instance_end_date": null,
+            "instance_id": null,
+            "instance_name": null,
+            "instance_start_date": null,
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": null,
+                "module_id": null,
+                "module_name": null,
+                "required_point": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_description": "bhj",
+        "course_id": 15,
+        "course_name": "bj",
+        "instances": [
+          {
+            "instance_end_date": null,
+            "instance_id": null,
+            "instance_name": null,
+            "instance_start_date": null,
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": null,
+                "module_id": null,
+                "module_name": null,
+                "required_point": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "domain_id": 1,
+    "domain_name": "Software Engineering"
+  },
+  {
+    "courses": [
+      {
+        "course_description": "An introductory course to data science principles.",
+        "course_id": 5,
+        "course_name": "Introduction to Data Science",
+        "instances": [
+          {
+            "instance_end_date": "2024-06-30",
+            "instance_id": 17,
+            "instance_name": "Spring 2024",
+            "instance_start_date": "2024-03-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Data Science Basics",
+                "module_id": 33,
+                "module_name": "Module 1",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Data Science Tools",
+                "module_id": 34,
+                "module_name": "Module 2",
+                "required_point": 50
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-09-30",
+            "instance_id": 18,
+            "instance_name": "Summer 2024",
+            "instance_start_date": "2024-07-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Data Science Basics",
+                "module_id": 35,
+                "module_name": "Module 3",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Data Science Tools",
+                "module_id": 36,
+                "module_name": "Module 4",
+                "required_point": 50
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-12-31",
+            "instance_id": 19,
+            "instance_name": "Fall 2024",
+            "instance_start_date": "2024-10-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Data Science Basics",
+                "module_id": 37,
+                "module_name": "Module 5",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Data Science Tools",
+                "module_id": 38,
+                "module_name": "Module 6",
+                "required_point": 50
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2025-03-31",
+            "instance_id": 20,
+            "instance_name": "Winter 2024",
+            "instance_start_date": "2025-01-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Data Science Basics",
+                "module_id": 39,
+                "module_name": "Module 7",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Data Science Tools",
+                "module_id": 40,
+                "module_name": "Module 8",
+                "required_point": 50
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_description": "Learn about various machine learning algorithms and techniques.",
+        "course_id": 6,
+        "course_name": "Machine Learning",
+        "instances": [
+          {
+            "instance_end_date": "2024-06-30",
+            "instance_id": 21,
+            "instance_name": "Spring 2024",
+            "instance_start_date": "2024-03-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Supervised Learning",
+                "module_id": 41,
+                "module_name": "Module 1",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Unsupervised Learning",
+                "module_id": 42,
+                "module_name": "Module 2",
+                "required_point": 70
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-09-30",
+            "instance_id": 22,
+            "instance_name": "Summer 2024",
+            "instance_start_date": "2024-07-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Supervised Learning",
+                "module_id": 43,
+                "module_name": "Module 3",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Unsupervised Learning",
+                "module_id": 44,
+                "module_name": "Module 4",
+                "required_point": 70
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-12-31",
+            "instance_id": 23,
+            "instance_name": "Fall 2024",
+            "instance_start_date": "2024-10-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Supervised Learning",
+                "module_id": 45,
+                "module_name": "Module 5",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Unsupervised Learning",
+                "module_id": 46,
+                "module_name": "Module 6",
+                "required_point": 70
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2025-03-31",
+            "instance_id": 24,
+            "instance_name": "Winter 2024",
+            "instance_start_date": "2025-01-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Supervised Learning",
+                "module_id": 47,
+                "module_name": "Module 7",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Unsupervised Learning",
+                "module_id": 48,
+                "module_name": "Module 8",
+                "required_point": 70
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_description": "An overview of data visualization techniques.",
+        "course_id": 7,
+        "course_name": "Data Visualization",
+        "instances": [
+          {
+            "instance_end_date": "2024-06-30",
+            "instance_id": 25,
+            "instance_name": "Spring 2024",
+            "instance_start_date": "2024-03-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Visualization Principles",
+                "module_id": 49,
+                "module_name": "Module 1",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Visualization Tools",
+                "module_id": 50,
+                "module_name": "Module 2",
+                "required_point": 60
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-09-30",
+            "instance_id": 26,
+            "instance_name": "Summer 2024",
+            "instance_start_date": "2024-07-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Visualization Principles",
+                "module_id": 51,
+                "module_name": "Module 3",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Visualization Tools",
+                "module_id": 52,
+                "module_name": "Module 4",
+                "required_point": 60
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-12-31",
+            "instance_id": 27,
+            "instance_name": "Fall 2024",
+            "instance_start_date": "2024-10-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Visualization Principles",
+                "module_id": 53,
+                "module_name": "Module 5",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Visualization Tools",
+                "module_id": 54,
+                "module_name": "Module 6",
+                "required_point": 60
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2025-03-31",
+            "instance_id": 28,
+            "instance_name": "Winter 2024",
+            "instance_start_date": "2025-01-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Visualization Principles",
+                "module_id": 55,
+                "module_name": "Module 7",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Visualization Tools",
+                "module_id": 56,
+                "module_name": "Module 8",
+                "required_point": 60
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_description": "Explore big data technologies and their applications.",
+        "course_id": 8,
+        "course_name": "Big Data Technologies",
+        "instances": [
+          {
+            "instance_end_date": "2024-06-30",
+            "instance_id": 29,
+            "instance_name": "Spring 2024",
+            "instance_start_date": "2024-03-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Big Data Fundamentals",
+                "module_id": 57,
+                "module_name": "Module 1",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Big Data Applications",
+                "module_id": 58,
+                "module_name": "Module 2",
+                "required_point": 80
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-09-30",
+            "instance_id": 30,
+            "instance_name": "Summer 2024",
+            "instance_start_date": "2024-07-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Big Data Fundamentals",
+                "module_id": 59,
+                "module_name": "Module 3",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Big Data Applications",
+                "module_id": 60,
+                "module_name": "Module 4",
+                "required_point": 80
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2024-12-31",
+            "instance_id": 31,
+            "instance_name": "Fall 2024",
+            "instance_start_date": "2024-10-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Big Data Fundamentals",
+                "module_id": 61,
+                "module_name": "Module 5",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Big Data Applications",
+                "module_id": 62,
+                "module_name": "Module 6",
+                "required_point": 80
+              }
+            ]
+          },
+          {
+            "instance_end_date": "2025-03-31",
+            "instance_id": 32,
+            "instance_name": "Winter 2024",
+            "instance_start_date": "2025-01-01",
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Big Data Fundamentals",
+                "module_id": 63,
+                "module_name": "Module 7",
+                "required_point": 0
+              },
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": "Big Data Applications",
+                "module_id": 64,
+                "module_name": "Module 8",
+                "required_point": 80
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_description": "vfhbe fhevfe fbehjasfhowiaf bfhebfhalf egf ejvghe",
+        "course_id": 9,
+        "course_name": "Docker",
+        "instances": [
+          {
+            "instance_end_date": null,
+            "instance_id": null,
+            "instance_name": null,
+            "instance_start_date": null,
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": null,
+                "module_id": null,
+                "module_name": null,
+                "required_point": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_description": "vfhbe fhevfe fbehjasfhowiaf bfhebfhalf egf ejvghe",
+        "course_id": 10,
+        "course_name": "Docker",
+        "instances": [
+          {
+            "instance_end_date": null,
+            "instance_id": null,
+            "instance_name": null,
+            "instance_start_date": null,
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": null,
+                "module_id": null,
+                "module_name": null,
+                "required_point": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "domain_id": 2,
+    "domain_name": "Data Science"
+  },
+  {
+    "courses": [
+      {
+        "course_description": "fdfbdjf fdbf",
+        "course_id": 14,
+        "course_name": "dbshjdb",
+        "instances": [
+          {
+            "instance_end_date": null,
+            "instance_id": null,
+            "instance_name": null,
+            "instance_start_date": null,
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": null,
+                "module_id": null,
+                "module_name": null,
+                "required_point": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "domain_id": 3,
+    "domain_name": "SOFTWARE ENGINEERING"
+  },
+  {
+    "courses": [
+      {
+        "course_description": null,
+        "course_id": null,
+        "course_name": null,
+        "instances": [
+          {
+            "instance_end_date": null,
+            "instance_id": null,
+            "instance_name": null,
+            "instance_start_date": null,
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": null,
+                "module_id": null,
+                "module_name": null,
+                "required_point": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "domain_id": 4,
+    "domain_name": "SOFTWARE ENGINEERING"
+  },
+  {
+    "courses": [
+      {
+        "course_description": null,
+        "course_id": null,
+        "course_name": null,
+        "instances": [
+          {
+            "instance_end_date": null,
+            "instance_id": null,
+            "instance_name": null,
+            "instance_start_date": null,
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": null,
+                "module_id": null,
+                "module_name": null,
+                "required_point": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "domain_id": 5,
+    "domain_name": "SOFTWARE ENGINEERING"
+  },
+  {
+    "courses": [
+      {
+        "course_description": null,
+        "course_id": null,
+        "course_name": null,
+        "instances": [
+          {
+            "instance_end_date": null,
+            "instance_id": null,
+            "instance_name": null,
+            "instance_start_date": null,
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": null,
+                "module_id": null,
+                "module_name": null,
+                "required_point": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "domain_id": 6,
+    "domain_name": "SOFTWARE ENGINEERING"
+  },
+  {
+    "courses": [
+      {
+        "course_description": "hjdbfhbbdfj fbjgf",
+        "course_id": 11,
+        "course_name": "Course New",
+        "instances": [
+          {
+            "instance_end_date": null,
+            "instance_id": null,
+            "instance_name": null,
+            "instance_start_date": null,
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": null,
+                "module_id": null,
+                "module_name": null,
+                "required_point": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "domain_id": 7,
+    "domain_name": "New Domain"
+  },
+  {
+    "courses": [
+      {
+        "course_description": null,
+        "course_id": null,
+        "course_name": null,
+        "instances": [
+          {
+            "instance_end_date": null,
+            "instance_id": null,
+            "instance_name": null,
+            "instance_start_date": null,
+            "modules": [
+              {
+                "activities": [
+                  {
+                    "activity_description": null,
+                    "activity_id": null,
+                    "activity_name": null,
+                    "level": null,
+                    "point": null,
+                    "type": null
+                  }
+                ],
+                "module_description": null,
+                "module_id": null,
+                "module_name": null,
+                "required_point": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "domain_id": 8,
+    "domain_name": "bf"
+  }
+]

@@ -6,46 +6,40 @@ import Domines from "../Domines/Domines";
 import UserProfile from "../UserProfile/UserProfile";
 import Community from "../Community/Community";
 import Home from "../Home/Home";
+import BalloonAnimation from "../BalloonAnimation/BalloonAnimation";
 
 function UserDashboard() {
   const [getDomines, setDomines] = useState([]);
   const { component } = useParams();
-  const [loading, setLoading] = useState(false);
   const [visibleComponent, setVisibleComponent] = useState("home");
   const navigate = useNavigate();
 
-  const goTo = (component) => {
-    if (!component) {
-      return;
-    }
-    navigate(`/${component}`);
-  };
+  
   useEffect(() => {
-    setLoading(true);
     if (component) {
       setVisibleComponent(component);
     }
     getAllDomines()
       .then((response) => {
         setDomines(response);
-        setLoading(false);
       })
       .catch((error) => {
-        setLoading(false);
       });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <nav className="bg-white shadow-md">
+      <BalloonAnimation></BalloonAnimation>
+      <nav className="bg-white shadow-md" style={{ zIndex: 1 }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
-                <img src="/glitch.png" width="50px" height="50px" />
+                <img alt="glitch" src="/glitch.png" width="50px" height="50px" />
               </div>
               <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
-                <a
+                <button
                   className={`cursor-pointer border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-bold ${
                     visibleComponent === "home" ? "border-b-2" : ""
                   } `}
@@ -54,8 +48,8 @@ function UserDashboard() {
                   }}
                 >
                   Home
-                </a>
-                <a
+                </button>
+                <button
                   className={`cursor-pointer border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-bold ${
                     visibleComponent === "profile" ? "border-b-2" : ""
                   } `}
@@ -64,8 +58,8 @@ function UserDashboard() {
                   }}
                 >
                   My Profile
-                </a>
-                <a
+                </button>
+                <button
                   className={`cursor-pointer border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-bold ${
                     visibleComponent === "learning" ? "border-b-2" : ""
                   } `}
@@ -74,9 +68,9 @@ function UserDashboard() {
                   }}
                 >
                   Learning
-                </a>
+                </button>
 
-                <a
+                <button
                   className={`cursor-pointer border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-bold ${
                     visibleComponent === "community" ? "border-b-2" : ""
                   } `}
@@ -85,7 +79,7 @@ function UserDashboard() {
                   }}
                 >
                   Community
-                </a>
+                </button>
                 <button
                   className={`font-bold`}
                   onClick={() => {

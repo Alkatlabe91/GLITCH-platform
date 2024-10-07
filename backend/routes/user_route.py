@@ -3,26 +3,9 @@ from flask import Blueprint, request, jsonify, session, send_from_directory
 from models.user_model import UserTable
 from flask_cors import CORS, cross_origin
 
+
 users_bp = Blueprint('users', __name__)
 
-
-@users_bp.route('/users/login', methods=['POST'])
-@cross_origin(supports_credentials=True)
-def login():
-    print(request)
-    data = request.json
-    userTable = UserTable()
-    user = userTable.get_teacher_by_username_password(
-        username=data['user_name'],
-        password=data['password']
-    )
-    print(user)
-    if user:
-        session['user_id'] = user['user_id']
-        print("called",session['user_id'] )
-        return jsonify({'message': 'User logged in successfully!', 'user': user}), 200
-    
-    return jsonify({'message': 'User not found!'}), 422
 
 @users_bp.route('/users/logout', methods=['POST'])
 @cross_origin(supports_credentials=True)
@@ -49,7 +32,6 @@ def get_picture(filename):
 
 @users_bp.route('/users/my_profile_pic', methods=['POST'])
 def upload_file():
-    print(session['user_id'])
     if session['user_id'] is None:
         return jsonify({'message': 'forbidden'}), 403
     if 'file' not in request.files:
@@ -66,7 +48,6 @@ def upload_file():
         userTable = UserTable()
         user = userTable.get_user_by_id(session["user_id"])
         userTable.update_user_by_id(user["user_id"], user["username"], user["password"], user["email"], user["first_name"], user["last_name"], filename, user["IsTeacher"] )
-        print(filename)
         return jsonify({'message': 'updated successfully'})
 
 @users_bp.route('/users/get_user_by_id', methods=['GET'])

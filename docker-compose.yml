@@ -25,5 +25,12 @@ services:
      context: ./frontend/mobile/
     ports:
      - "8081:8081"
+     - "19001:19001"
+     - "19002:19002"
+     - "19006:19006"
+    command: npm run startwithtunnel
+    stdin_open: true
+    tty: true
+    # remove: true    
     depends_on:
      - backend

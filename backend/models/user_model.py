@@ -13,13 +13,20 @@ class UserTable:
         return sqlite3.connect(self.db_path)
     
     def create_user (self,username, password, email, first_name, last_name, profile_picture = None, IsTeacher = 0):
-     conn = self._connect()
-     conn.row_factory = sqlite3.Row
-     cursor = conn.cursor()
-     cursor.execute("""INSERT INTO users ("username", "password", "email", "first_name", "last_name", "profile_picture", "IsTeacher") VALUES
-     (?, ?, ?, ?, ?, ?, ?)""", (username, password, email, first_name, last_name, profile_picture, IsTeacher,))
-     conn.commit()
-     conn.close()
+      conn = self._connect()
+      conn.row_factory = sqlite3.Row
+      cursor = conn.cursor()
+      cursor.execute("""
+            INSERT INTO users (username, password, email, first_name, last_name, profile_picture, IsTeacher)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        """, (username, password, email, first_name, last_name, profile_picture, IsTeacher))
+      conn.commit()
+      user_id = cursor.lastrowid
+      cursor.execute("SELECT * FROM users WHERE user_id = ?", (user_id,))
+      user = cursor.fetchone()
+      conn.close()  
+      return dict(user)
+
      
     def get_teacher_by_username_password(self, username, password):
       conn = self._connect()

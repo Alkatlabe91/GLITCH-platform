@@ -1,29 +1,53 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import UserProfile from "../UserProfile/UserProfile";
 import TasksTable from "../TasksTable/TasksTable";
 import Community from "../Community/Community";
 import { logout } from "../../services/auth";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import AdminPanel from "../AdminPanel/AdminPanel";
+import AnalyticsDashboard from "../AnalyticsDashboard/AnalyticsDashboard";
 
 
 function TeacherDashboard() {
   const [visibleComponent, setVisibleComponent] = useState("home");
   const navigate = useNavigate();
-
+  useEffect(() => {
+  }, []);
   return (
-    <div className="min-h-screen bg-gray-100">
-      <nav className="bg-white shadow-md">
+    <div className="min-h-screen dark:bg-black bg-gray-100">
+      <nav className="dark:bg-black bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
                 {/* <h1 className="text-xl font-bold">Dashboard</h1> */}
                 <div className="flex-shrink-0 flex items-center">
-                <img src="/glitch.png" width="50px" height="50px" />
-              </div>
+                  <img alt="glitch icon" src="/glitch.png" width="50px" height="50px" />
+                </div>
               </div>
               <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
-                <a
+                <button
+                   
+                  onClick={() => {
+                    setVisibleComponent("panel");
+                  }}
+                  className={`cursor-pointer border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-bold ${
+                    visibleComponent === "panel" ? "border-b-2" : ""
+                  } `}
+                >
+                  Admin Panel
+                </button>
+                <button
+                  onClick={() => {
+                    setVisibleComponent("analytics");
+                  }}
+                  className={`cursor-pointer border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-bold ${
+                    visibleComponent === "analytics" ? "border-b-2" : ""
+                  } `}
+                >
+                  Analytics Panel
+                </button>
+                <button
                   onClick={() => {
                     setVisibleComponent("reviewe");
                   }}
@@ -32,8 +56,8 @@ function TeacherDashboard() {
                   } `}
                 >
                   Reviewe Student Tasks
-                </a>
-                <a
+                </button>
+                <button
                   className={`cursor-pointer border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-bold ${
                     visibleComponent === "profile" ? "border-b-2" : ""
                   } `}
@@ -42,9 +66,9 @@ function TeacherDashboard() {
                   }}
                 >
                   My Profile
-                </a>
+                </button>
 
-                <a
+                <button
                   className={`cursor-pointer border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-bold ${
                     visibleComponent === "community" ? "border-b-2" : ""
                   } `}
@@ -53,7 +77,7 @@ function TeacherDashboard() {
                   }}
                 >
                   Community
-                </a>
+                </button>
                 <button
                   className={`font-bold`}
                   onClick={() => {
@@ -85,6 +109,10 @@ function TeacherDashboard() {
                 <UserProfile></UserProfile>
               ) : visibleComponent === "community" ? (
                 <Community> </Community>
+              ) : visibleComponent === "panel" ? (
+                <AdminPanel></AdminPanel>
+              ) : visibleComponent === "analytics" ? (
+                <AnalyticsDashboard></AnalyticsDashboard>
               ) : (
                 <TasksTable></TasksTable>
               )}

@@ -69,7 +69,6 @@ CREATE TABLE usermodules (
   "module_id" integer ,
   FOREIGN KEY("user_id") REFERENCES users("user_id"),
   FOREIGN KEY("module_id") REFERENCES modules("module_id")
-  
 ) ;
 
 CREATE TABLE userprogressmodules (
