@@ -1,8 +1,3 @@
-#function to get all domains joined with courses
-#function to get registered domain by usermodules expected a user_id and return a domain, courses modules, activity that user has already registered
-#fuction to get all courses
-#function to register a user in a module, function expected a user_id and module_id and copy all available activity to the available activity in the related modules to userprogressmodules
-
 import sqlite3
 from collections import defaultdict
 from datetime import datetime

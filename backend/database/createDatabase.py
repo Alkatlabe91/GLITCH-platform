@@ -29,10 +29,10 @@ connection.executescript("""
 --(2, 'Big Data Technologies', 'Explore big data technologies and their applications.');
 
 INSERT INTO users (username, password, email, first_name, last_name, isTeacher) VALUES 
-('user1', 'password1', 'user1@example.com', 'John', 'Doe', 0),
-('user2', 'password2', 'user2@example.com', 'Jane', 'Smith', 0),
-('user3', 'password3', 'user3@example.com', 'Michael', 'Johnson', 0),
-('teacher1', 'teacherpass', 'teacher@example.com', 'Alice', 'Anderson', 1);
+('user1', 'pbkdf2:sha256:260000$mfTomSdhl3VXf0Rx$fda2ab9578474cc4778da15e10a8391aa35cf0146f7899ffc3917c3933bc90be', 'user1@example.com', 'John', 'Doe', 0),
+('user2', 'pbkdf2:sha256:260000$xaskGZ11AncMeyja$5a4b73d5e30d0841a3c7c1f782b556777990cb23cea22b48f1b023aef0036b7e', 'user2@example.com', 'Jane', 'Smith', 0),
+('user3', 'pbkdf2:sha256:260000$i031eWjjSgPBEcGO$f3dd69968de2567ed1cc2de1c199033a522ae44af9db3edaa511b2c9806bd79d', 'user3@example.com', 'Michael', 'Johnson', 0),
+('teacher1', 'pbkdf2:sha256:260000$hr6GjEEfMsGzUWUc$f71e0e60e20a382b65e2323a24d9d2cacb742011768b2a632efd6078c89a0f39', 'teacher@example.com', 'Alice', 'Anderson', 1);
 
 -- Inserting instances
 --INSERT INTO instances (course_id, instance_name, start_date, end_date) VALUES 
